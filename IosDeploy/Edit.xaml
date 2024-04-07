@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IosDeploy.Edit">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label x:Name="IdL" Text="ID"/>
+            <Entry x:Name="nameL" Placeholder="name"/>
+            <Entry x:Name="categoryL" Placeholder="category"/>
+            <Entry x:Name="descriptionL" Placeholder="description"/>
+            <Button x:Name="deleteB" Text="Delete" Clicked="deleteB_Clicked"/>
+            <Button x:Name="minusB" Text="-" Clicked="minusB_Clicked"/>
+            <Label x:Name="countL" Text="count"/>
+            <Button x:Name="plusB" Text="+" Clicked="plusB_Clicked"/>
+            <Button x:Name="saveB" Text="Save" Clicked="saveB_Clicked"/>
+            <Label x:Name="barcodeL" Text="barcode"/>
+            <Image
+                x:Name="QrCodeImage"
+                HeightRequest="200"
+                WidthRequest="200"
+                HorizontalOptions="Center"
+                />
+            <Button x:Name="ShareBtn" Text="Share" Clicked="ShareBtn_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

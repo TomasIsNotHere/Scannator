@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="IosDeploy.Scan"
+            >
+    <VerticalStackLayout>
+        <Label Text="Scann"/>
+        <zxing:CameraBarcodeReaderView
+            x:Name="barcodeReader"
+            WidthRequest="300"
+            HeightRequest="300"
+            IsDetecting="True"
+            BarcodesDetected="BarcodeReader_BarcodesDetected"/>
+        <Label x:Name="Barcodetxt" Text=""/>
+        <Button x:Name="ScanBtn" Text="Stop scanning" Clicked="ScanBtn_Clicked"/>
+    </VerticalStackLayout>
+</ContentView>

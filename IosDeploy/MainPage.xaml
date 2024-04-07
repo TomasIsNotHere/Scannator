@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IosDeploy.MainPage">
+    <Grid RowDefinitions="90*,2*,8*" ColumnDefinitions="*,*,*,*">
+        <!-- Pages Content -->
+        <CarouselView Grid.Row="0" Grid.ColumnSpan="4" x:Name="carouselView" >
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Your page content here -->
+                    <ContentView Content="{Binding .}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                 </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView Grid.Row="1" x:Name="indicatorView" Margin="5" HorizontalOptions="Center"/>
+
+        <!-- Bottom Navigation Bar -->
+        <Button Grid.Row="2" Grid.Column="0" Text="Camera" Clicked="CameraButton_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="List" Clicked="ListButton_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="2" Text="Add" Clicked="AddButton_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="3" Text="Connect" Clicked="ConnectButton_Clicked"/>
+    </Grid>
+
+</ContentPage>
+
