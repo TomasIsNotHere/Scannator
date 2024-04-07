@@ -3,20 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IosDeploy.Add"
              >
-<VerticalStackLayout x:Name="layout">
-        <Entry x:Name="txtName" Placeholder="Name" />
-        <Entry x:Name="txtCategory" Placeholder="Category" />
-        <Entry x:Name="txtDescription" Placeholder="Description" />
-        <Entry x:Name="txtCount" Placeholder="Count" />
-
-        <Button Text="Add Data" Clicked="Add_Button_Clicked" />
+<VerticalStackLayout x:Name="layout" Margin="10,20">
+        <Grid RowDefinitions="*,*,*,*">
+            <Entry Grid.Row="0" Margin="5" x:Name="txtName" Placeholder="Name" />
+            <Entry Grid.Row="1" Margin="5" x:Name="txtCategory" Placeholder="Category" />
+            <Entry Grid.Row="2" Margin="5" x:Name="txtDescription" Placeholder="Description" />
+            <Entry Grid.Row="3" Margin="5" x:Name="txtCount" Placeholder="Count" />
+        </Grid>
 
         <Image
+                Margin="20"
                 x:Name="QrCodeImage"
                 HeightRequest="200"
                 WidthRequest="200"
                 HorizontalOptions="Center"
                 />
+    <Button Text="Add Data" Margin="10" WidthRequest="150" HeightRequest="60" Clicked="Add_Button_Clicked" />
 
     </VerticalStackLayout>
 </ContentView>

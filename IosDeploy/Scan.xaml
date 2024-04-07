@@ -5,14 +5,17 @@
              x:Class="IosDeploy.Scan"
             >
     <VerticalStackLayout>
-        <Label Text="Scann"/>
-        <zxing:CameraBarcodeReaderView
-            x:Name="barcodeReader"
-            WidthRequest="300"
-            HeightRequest="300"
-            IsDetecting="True"
-            BarcodesDetected="BarcodeReader_BarcodesDetected"/>
-        <Label x:Name="Barcodetxt" Text=""/>
-        <Button x:Name="ScanBtn" Text="Stop scanning" Clicked="ScanBtn_Clicked"/>
+        <Grid RowDefinitions="*,*,*,*" Margin="120">
+            <zxing:CameraBarcodeReaderView
+                Grid.Row="0"
+                x:Name="barcodeReader"
+                WidthRequest="300"
+                HeightRequest="300"
+                IsDetecting="True"
+                BarcodesDetected="BarcodeReader_BarcodesDetected"/>
+            <Label Grid.Row="1" x:Name="Barcodetxt" Text="" HorizontalOptions="Center"/>
+            <Label Grid.Row="2" x:Name="NoDatavase" Text="" HorizontalOptions="Center"/>
+            <Button Grid.Row="3" Margin="20" x:Name="ScanBtn" WidthRequest="200" HeightRequest="50" Text="Stop scanning" Clicked="ScanBtn_Clicked"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentView>

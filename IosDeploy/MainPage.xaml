@@ -13,8 +13,6 @@
             </CarouselView.ItemTemplate>
         </CarouselView>
 
-        <IndicatorView Grid.Row="1" x:Name="indicatorView" Margin="5" HorizontalOptions="Center"/>
-
         <!-- Bottom Navigation Bar -->
         <Button Grid.Row="2" Grid.Column="0" Text="Camera" Clicked="CameraButton_Clicked"/>
         <Button Grid.Row="2" Grid.Column="1" Text="List" Clicked="ListButton_Clicked"/>

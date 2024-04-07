@@ -24,7 +24,6 @@ public partial class Edit : ContentPage
         categoryL.Text = _item.category;
         descriptionL.Text = _item.description;
         countL.Text = _item.count.ToString();
-        barcodeL.Text = _item.barcode;
         GenerateQR();
     }
 

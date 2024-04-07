@@ -70,6 +70,8 @@ public partial class Add : ContentView
         Button button = new Button
         {
             Text = "Share",
+            WidthRequest = 150,
+            HeightRequest = 60,
             VerticalOptions = LayoutOptions.End,
             HorizontalOptions = LayoutOptions.FillAndExpand,
 

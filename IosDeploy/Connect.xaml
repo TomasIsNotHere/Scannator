@@ -4,9 +4,13 @@
              x:Class="IosDeploy.Connect"
              >
     <VerticalStackLayout>
-        <Label x:Name="localL" Text="LocalDatabase"/>
-        <Entry x:Name="localEntry" Placeholder="SQliteDb.db3" IsReadOnly="True"/>
-        <Label x:Name="serverL" Text="Server db adres"/>
-        <Entry x:Name="serverEntry" Text="Comming soon" IsReadOnly="True"/>
+        <Grid RowDefinitions="*,*,*,*,*,*" Margin="10,10">
+            <Label Grid.Row="0" x:Name="localL" Text="LocalDatabase"/>
+            <Entry Grid.Row="1" x:Name="localEntry" Placeholder="SQliteDb.db3" IsReadOnly="True"/>
+            <Button Grid.Row="2" Text="Connect" WidthRequest="100" HeightRequest="30" Margin="10"/>
+            <Label Grid.Row="3" x:Name="serverL" Text="Server db address"/>
+            <Entry Grid.Row="4" x:Name="serverEntry" Text="Comming soon" IsReadOnly="True"/>
+            <Button Grid.Row="5" Text="Connect" WidthRequest="100" HeightRequest="30" Margin="10"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentView>

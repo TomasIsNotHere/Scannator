@@ -26,7 +26,8 @@ public partial class Scan : ContentView
             Item item = App.ItemHandler.GetItemByCode(first.Value);
             if(item.name == "IsNotThere")
             {
-                Barcodetxt.Text = $"code: {first.Value} / format : {first.Format} / not in database";
+                Barcodetxt.Text = $"code: {first.Value}";
+                NoDatavase.Text = "not in database";
             }
             else
             {

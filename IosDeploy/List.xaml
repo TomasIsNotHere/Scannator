@@ -4,9 +4,14 @@
              x:Class="IosDeploy.List"
              >
     <VerticalStackLayout>
+            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*" Margin="20,10">
+                <Label Grid.Column="0" HorizontalTextAlignment="Start" Text="Name"/>
+                <Label Grid.Column="1" HorizontalTextAlignment="Center" Text="Category"/>
+                <Label Grid.Column="2" HorizontalTextAlignment="End" Text="Count"/>
+            </Grid>
             <CollectionView x:Name="itemList"
                             SelectionMode="Single"
-                SelectionChanged="itemList_SelectionChanged">
+                SelectionChanged="itemList_SelectionChanged" Margin="20">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -17,17 +22,15 @@
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="0" Text="{Binding id}"/>
-                            <Label Grid.Column="1" Text="{Binding name}"/>
-                            <Label Grid.Column="2" Text="{Binding category}"/>
-                            <Label Grid.Column="3" Text="{Binding count}"/>
+                            <Label Grid.Column="0" HorizontalTextAlignment="Start" Text="{Binding name}"/>
+                            <Label Grid.Column="1" HorizontalTextAlignment="Center" Text="{Binding category}"/>
+                            <Label Grid.Column="2" HorizontalTextAlignment="End" Text="{Binding count}"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        <Grid>
+        <Grid Margin="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
@@ -36,7 +39,7 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Text="refresh" Clicked="Refresh_Button_Clicked"/>
+            <Button Grid.Column="1" WidthRequest="150" HeightRequest="60" Text="Refresh" Clicked="Refresh_Button_Clicked"/>
 
         </Grid>
     </VerticalStackLayout>
