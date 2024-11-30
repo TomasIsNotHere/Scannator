@@ -1,5 +1,5 @@
 Scanátor3000 
 
-IOS aplikace skladoveho systemu. 
-Skolni projekt, ktery vytvari qr kody pro produkty, upravuje dat v databazi, a to vse diky skenovani qr kodu. 
-prozatim jen lokalni seznam s pripravou na externi databazi.
+IOS aplikace skladového systemu. 
+Školní projekt, který vytváří qr kódy pro produkty, upravuje data v databázi, a to vše díky skenování qr kódu. 
+Prozatím jen lokální seznam s přípravou na externí databázi.
